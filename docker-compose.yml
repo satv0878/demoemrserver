@@ -1,0 +1,20 @@
+version: "2.1"
+
+services:
+  demoemrserver:
+    command: node app.js
+    image: demoemrserver
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 9006:9006
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    volumes:
+      - "./data/:/data/db"
+    image: mongo
+    ports:
+      - "27017:27017"

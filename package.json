@@ -1,0 +1,51 @@
+{
+  "name": "expressdemoemrserver",
+  "version": "1.0.0",
+  "description": "seca DEMO EMR Server",
+  "main": "app.js",
+  "bin": "bin.js",
+  "pkg": {
+    "assets": [
+      "public/**/*"
+    ]
+  },
+  "scripts": {
+    "start": "node app.js",
+    "start-production": "node app.js",
+    "dev": "pkg -t node10-win-x64 -o ./app.dev app.js",
+    "test": "nodemon app.js",
+    "build": "nexe server/index.js",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve"
+  },
+  "author": "Tobias Verleger",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/cli": "^3.8.2",
+    "async": "^3.1.0",
+    "body-parser": "^1.19.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "helmet": "^3.21.1",
+    "http-errors": "^1.7.3",
+    "moment": "^2.24.0",
+    "mongodb": "^3.2.5",
+    "mongoose": "^5.7.1",
+    "mongoose-unique-validator": "^2.0.3",
+    "monk": "^7.0.0",
+    "morgan": "^1.9.1",
+    "nexe": "^3.2.2",
+    "node-sass-middleware": "^0.11.0",
+    "path": "^0.12.7",
+    "pkg": "^4.4.0",
+    "simple-hl7": "^3.1.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "electron": "^5.0.3",
+    "nodemon": "^1.19.2"
+  }
+}
